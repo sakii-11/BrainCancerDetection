@@ -1,10 +1,11 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 from flask import Flask, render_template, request, send_from_directory
 from tensorflow.keras.models import load_model
 from keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 import pickle 
 import boto3
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
